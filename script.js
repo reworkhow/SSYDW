@@ -9,11 +9,7 @@ function switchLanguage(lang) {
     });
 
     // Show/hide content based on language
-    if (lang === 'bilingual') {
-        // Show both languages
-        document.querySelectorAll('.en').forEach(el => el.style.display = '');
-        document.querySelectorAll('.cn').forEach(el => el.style.display = '');
-    } else if (lang === 'english') {
+    if (lang === 'english') {
         // Show only English
         document.querySelectorAll('.en').forEach(el => el.style.display = '');
         document.querySelectorAll('.cn').forEach(el => el.style.display = 'none');
@@ -29,7 +25,7 @@ function switchLanguage(lang) {
 
 // Load saved language preference on page load
 window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('preferredLanguage') || 'bilingual';
+    const savedLang = localStorage.getItem('preferredLanguage') || 'english';
     switchLanguage(savedLang);
 });
 
