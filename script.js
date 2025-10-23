@@ -1,3 +1,38 @@
+// Language Switching Function
+function switchLanguage(lang) {
+    // Update active tab
+    document.querySelectorAll('.lang-tab').forEach(tab => {
+        tab.classList.remove('active');
+        if (tab.getAttribute('data-lang') === lang) {
+            tab.classList.add('active');
+        }
+    });
+
+    // Show/hide content based on language
+    if (lang === 'bilingual') {
+        // Show both languages
+        document.querySelectorAll('.en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.cn').forEach(el => el.style.display = '');
+    } else if (lang === 'english') {
+        // Show only English
+        document.querySelectorAll('.en').forEach(el => el.style.display = '');
+        document.querySelectorAll('.cn').forEach(el => el.style.display = 'none');
+    } else if (lang === 'chinese') {
+        // Show only Chinese
+        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.cn').forEach(el => el.style.display = '');
+    }
+
+    // Save preference to localStorage
+    localStorage.setItem('preferredLanguage', lang);
+}
+
+// Load saved language preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('preferredLanguage') || 'bilingual';
+    switchLanguage(savedLang);
+});
+
 // Mobile Menu Toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');

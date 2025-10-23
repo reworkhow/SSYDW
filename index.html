@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +10,39 @@
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
+    <!-- Language Tabs -->
+    <div class="language-tabs">
+        <div class="container">
+            <button class="lang-tab active" onclick="switchLanguage('bilingual')" data-lang="bilingual">
+                中文 + English
+            </button>
+            <button class="lang-tab" onclick="switchLanguage('english')" data-lang="english">
+                English Only
+            </button>
+            <button class="lang-tab" onclick="switchLanguage('chinese')" data-lang="chinese">
+                中文
+            </button>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
                 <img src="images/logo.png" alt="SSYDW Logo" class="logo-img">
                 <div>
-                    <h1>山山医动物</h1>
-                    <p class="nav-subtitle">Pet Care at Your Home</p>
+                    <h1 class="cn">山山医动物</h1>
+                    <h1 class="en" style="display:none;">Pet Care at Your Home</h1>
+                    <p class="nav-subtitle en">Dr. Shen Li Veterinary Service</p>
+                    <p class="nav-subtitle cn" style="display:none;">李医生兽医服务</p>
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home">首页 Home</a></li>
-                <li><a href="#about">关于 About</a></li>
-                <li><a href="#services">服务 Services</a></li>
-                <li><a href="#team">团队 Team</a></li>
-                <li><a href="#contact">联系 Contact</a></li>
+                <li><a href="#home"><span class="cn">首页</span> <span class="en">Home</span></a></li>
+                <li><a href="#about"><span class="cn">关于</span> <span class="en">About</span></a></li>
+                <li><a href="#services"><span class="cn">服务</span> <span class="en">Services</span></a></li>
+                <li><a href="#team"><span class="cn">团队</span> <span class="en">Team</span></a></li>
+                <li><a href="#contact"><span class="cn">联系</span> <span class="en">Contact</span></a></li>
             </ul>
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
                 <span></span>
@@ -48,18 +65,26 @@
                 <div class="hero-image">
                     <img src="images/hero.png" alt="Dr. Shen Li Veterinary Service">
                     <div class="badge-container">
-                        <div class="badge">Now Accepting New Clients</div>
-                        <div class="badge-alt">现在接受新客户</div>
+                        <div class="badge en">Now Accepting New Clients</div>
+                        <div class="badge-alt cn">现在接受新客户</div>
                     </div>
                 </div>
                 <div class="hero-content">
-                    <h2>Welcome to Dr. Shen Li Veterinary Service!</h2>
-                    <p>I'm Dr. Shen Li. With years of expertise in emergency care, general practice, and telemedicine, I offer comprehensive veterinary care right at your doorstep.</p>
-                    <p>My services encompass physical exams, blood and urine diagnostics, vaccination, treatment of ear and skin diseases, pain management, and minor wound care. Additionally, once an in-person relationship is established, I provide second opinions and teleconsultations.</p>
-                    <p>Entrust your furry loved ones to my care. Fluent in both Mandarin and English for your convenience. Let my expert care come to you in the form of convenient and stress-free house call veterinary service!</p>
+                    <h2 class="en">Welcome to Dr. Shen Li Veterinary Service!</h2>
+                    <h2 class="cn" style="display:none;">欢迎来到李医生兽医服务！</h2>
+                    
+                    <p class="en">I'm Dr. Shen Li. With years of expertise in emergency care, general practice, and telemedicine, I offer comprehensive veterinary care right at your doorstep.</p>
+                    <p class="cn" style="display:none;">我是李医生。凭借多年的急诊护理、全科诊疗和远程医疗专业知识，我为您提供全面的上门兽医护理服务。</p>
+                    
+                    <p class="en">My services encompass physical exams, blood and urine diagnostics, vaccination, treatment of ear and skin diseases, pain management, and minor wound care. Additionally, once an in-person relationship is established, I provide second opinions and teleconsultations.</p>
+                    <p class="cn" style="display:none;">我的服务包括体格检查、血液和尿液诊断、疫苗接种、耳部和皮肤疾病治疗、疼痛管理和轻微伤口护理。此外，一旦建立了面对面的关系，我还提供第二意见和远程咨询。</p>
+                    
+                    <p class="en">Entrust your furry loved ones to my care. Fluent in both Mandarin and English for your convenience. Let my expert care come to you in the form of convenient and stress-free house call veterinary service!</p>
+                    <p class="cn" style="display:none;">将您的毛茸茸的宠物托付给我。我精通中文和英文，为您提供便利。让我的专业护理以便捷无压力的上门兽医服务形式来到您身边！</p>
+                    
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">联系我们 Contact Us</a>
-                        <a href="#services" class="btn btn-secondary">了解服务 Our Services</a>
+                        <a href="#contact" class="btn btn-primary"><span class="cn">联系我们</span> <span class="en">Contact Us</span></a>
+                        <a href="#services" class="btn btn-secondary"><span class="cn">了解服务</span> <span class="en">Our Services</span></a>
                     </div>
                 </div>
             </div>
@@ -69,10 +94,10 @@
     <!-- About Section -->
     <section id="about" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">About Me 关于我</h2>
+            <h2 class="section-title"><span class="en">About Me</span> <span class="cn">关于我</span></h2>
             <div class="about-content">
-                <p>Dr. Shen Li is a passionate and experienced veterinarian who has more than 10 years in veterinary medicine. Since she got her DVM degree from Iowa State University, she has worked as emergency veterinarian and attending doctor in many specialty hospitals VCA Sacramento Referral Center and UC Davis Veterinary Teaching Hospital, and more than 5 years in family medicine and emergency medicine at UC Davis Veterinary Teaching Hospital and Vista Veterinary specialists, making her the perfect choice for all of your pet health needs.</p>
-                <p>李医生是一位充满热情和经验丰富的兽医，在兽医领域拥有超过10年的经验。自从她从爱荷华州立大学获得兽医学位以来，她曾在多家专科医院担任急诊兽医和主治医生，包括VCA萨克拉门托转诊中心和加州大学戴维斯分校兽医教学医院，在家庭医学和急诊医学方面有超过5年的经验，是您宠物健康需求的完美选择。</p>
+                <p class="en">Dr. Shen Li is a passionate and experienced veterinarian who has more than 10 years in veterinary medicine. Since she got her DVM degree from Iowa State University, she has worked as emergency veterinarian and attending doctor in many specialty hospitals VCA Sacramento Referral Center and UC Davis Veterinary Teaching Hospital, and more than 5 years in family medicine and emergency medicine at UC Davis Veterinary Teaching Hospital and Vista Veterinary specialists, making her the perfect choice for all of your pet health needs.</p>
+                <p class="cn" style="display:none;">李医生是一位充满热情和经验丰富的兽医，在兽医领域拥有超过10年的经验。自从她从爱荷华州立大学获得兽医学位以来，她曾在多家专科医院担任急诊兽医和主治医生，包括VCA萨克拉门托转诊中心和加州大学戴维斯分校兽医教学医院，在家庭医学和急诊医学方面有超过5年的经验，是您宠物健康需求的完美选择。</p>
             </div>
         </div>
     </section>
@@ -80,27 +105,27 @@
     <!-- Services Section -->
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title">Our Services 我们的服务</h2>
+            <h2 class="section-title"><span class="en">Our Services</span> <span class="cn">我们的服务</span></h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🐶</div>
-                    <h3>上门看诊</h3>
-                    <h4>House Call Veterinary Service</h4>
+                    <h3 class="cn">上门看诊</h3>
+                    <h4 class="en">House Call Veterinary Service</h4>
                     <div class="service-image">
                         <img src="images/service-home.png" alt="House Call Service">
                     </div>
-                    <p>Comprehensive in-home veterinary care including physical exams, diagnostics, vaccinations, and treatment. Stress-free care in your pet's familiar environment.</p>
-                    <p>全面的上门兽医服务，包括体检、诊断、疫苗接种和治疗。在您宠物熟悉的环境中提供无压力的护理。</p>
+                    <p class="en">Comprehensive in-home veterinary care including physical exams, diagnostics, vaccinations, and treatment. Stress-free care in your pet's familiar environment.</p>
+                    <p class="cn" style="display:none;">全面的上门兽医服务，包括体检、诊断、疫苗接种和治疗。在您宠物熟悉的环境中提供无压力的护理。</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📱</div>
-                    <h3>线上问诊</h3>
-                    <h4>Telemedicine Consultation</h4>
+                    <h3 class="cn">线上问诊</h3>
+                    <h4 class="en">Telemedicine Consultation</h4>
                     <div class="service-image">
                         <img src="images/service-online.png" alt="Telemedicine Service">
                     </div>
-                    <p>Remote veterinary consultations and second opinions once an in-person relationship is established. Convenient care through video calls and messaging.</p>
-                    <p>在建立面对面关系后提供远程兽医咨询和第二意见。通过视频通话和消息提供便捷的护理服务。</p>
+                    <p class="en">Remote veterinary consultations and second opinions once an in-person relationship is established. Convenient care through video calls and messaging.</p>
+                    <p class="cn" style="display:none;">在建立面对面关系后提供远程兽医咨询和第二意见。通过视频通话和消息提供便捷的护理服务。</p>
                 </div>
             </div>
         </div>
@@ -109,10 +134,10 @@
     <!-- Team Section -->
     <section id="team" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Our Team 我们的团队</h2>
+            <h2 class="section-title"><span class="en">Our Team</span> <span class="cn">我们的团队</span></h2>
             <div class="team-content">
-                <p>Our team is composed of highly experienced veterinary nurses and enthusiastic veterinary assistant interns, each bringing a deep-rooted passion for delivering veterinary care of the highest caliber.</p>
-                <p>我们的团队由经验丰富的兽医护士和热情的兽医助理实习生组成，每个人都对提供最高水准的兽医护理充满热情。</p>
+                <p class="en">Our team is composed of highly experienced veterinary nurses and enthusiastic veterinary assistant interns, each bringing a deep-rooted passion for delivering veterinary care of the highest caliber.</p>
+                <p class="cn" style="display:none;">我们的团队由经验丰富的兽医护士和热情的兽医助理实习生组成，每个人都对提供最高水准的兽医护理充满热情。</p>
             </div>
         </div>
     </section>
@@ -120,28 +145,31 @@
     <!-- Collaborators Section -->
     <section id="collaborators" class="section">
         <div class="container">
-            <h2 class="section-title">Collaborators 合作伙伴</h2>
-            <p class="collaborators-intro">We have established partnerships with various diagnostic laboratories and referral centers, ensuring the provision of precise diagnostic testing outcomes and expert veterinary specialist care.</p>
-            <p class="collaborators-intro">我们与各种诊断实验室和转诊中心建立了合作关系，确保提供精确的诊断测试结果和专业的兽医专科护理。</p>
+            <h2 class="section-title"><span class="en">Our Partners</span> <span class="cn">合作伙伴</span></h2>
+            <p class="collaborators-intro en">We have established partnerships with various diagnostic laboratories and referral centers, ensuring the provision of precise diagnostic testing outcomes and expert veterinary specialist care.</p>
+            <p class="collaborators-intro cn" style="display:none;">我们与各种诊断实验室和转诊中心建立了合作关系，确保提供精确的诊断测试结果和专业的兽医专科护理。</p>
             
             <div class="collaborators-grid">
                 <div class="collaborator-card">
                     <div class="collaborator-logo">
                         <img src="images/idexx.png" alt="IDEXX">
                     </div>
-                    <p>IDEXX is a global leader in pet healthcare innovation. Their high standard diagnostics and reliable customer services with veterinary specialists consultation offers make them standout among the diagnostic companies.</p>
+                    <p class="en">IDEXX is a global leader in pet healthcare innovation. Their high standard diagnostics and reliable customer services with veterinary specialists consultation offers make them standout among the diagnostic companies.</p>
+                    <p class="cn" style="display:none;">IDEXX是宠物健康创新的全球领导者。他们的高标准诊断和可靠的客户服务以及兽医专家咨询使他们在诊断公司中脱颖而出。</p>
                 </div>
                 <div class="collaborator-card">
                     <div class="collaborator-logo">
                         <img src="images/vgl.png" alt="VGL">
                     </div>
-                    <p>The Veterinary Genetics Laboratory (VGL) is a non-profit, self-supporting unit of the School of Veterinary Medicine at the University of California, Davis. It provides highly accurate genetic testing results and animal forensic services.</p>
+                    <p class="en">The Veterinary Genetics Laboratory (VGL) is a non-profit, self-supporting unit of the School of Veterinary Medicine at the University of California, Davis. It provides highly accurate genetic testing results and animal forensic services.</p>
+                    <p class="cn" style="display:none;">兽医遗传学实验室（VGL）是加州大学戴维斯分校兽医学院的非营利性自给自足单位。它提供高度准确的基因检测结果和动物法医服务。</p>
                 </div>
                 <div class="collaborator-card">
                     <div class="collaborator-logo">
                         <img src="images/texas-am.png" alt="Texas A&M GI Lab">
                     </div>
-                    <p>The Texas A&M Gastrointestinal Laboratory (GI Lab) provides specialized testing services to help veterinarians diagnose and treat gastrointestinal diseases.</p>
+                    <p class="en">The Texas A&M Gastrointestinal Laboratory (GI Lab) provides specialized testing services to help veterinarians diagnose and treat gastrointestinal diseases.</p>
+                    <p class="cn" style="display:none;">德克萨斯农工大学胃肠实验室（GI Lab）提供专业的检测服务，帮助兽医诊断和治疗胃肠道疾病。</p>
                 </div>
             </div>
         </div>
@@ -150,46 +178,45 @@
     <!-- Contact Section -->
     <section id="contact" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Contact Us 联系我们</h2>
+            <h2 class="section-title"><span class="en">Contact Us</span> <span class="cn">联系我们</span></h2>
             <div class="contact-container">
                 <div class="contact-info-box">
-                    <h3>联系方式 Contact Information</h3>
+                    <h3><span class="cn">联系方式</span> <span class="en">Contact Information</span></h3>
                     <div class="contact-items">
                         <div class="contact-item">
                             <span class="contact-icon">📞</span>
                             <div>
-                                <strong>电话 Tel</strong>
+                                <strong><span class="cn">电话</span> <span class="en">Tel</span></strong>
                                 <p>+1234567890</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">💬</span>
                             <div>
-                                <strong>微信 WeChat</strong>
+                                <strong><span class="cn">微信</span> <span class="en">WeChat</span></strong>
                                 <p>SSYDW</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📱</span>
                             <div>
-                                <strong>小红书 Xiaohongshu</strong>
+                                <strong><span class="cn">小红书</span> <span class="en">Xiaohongshu</span></strong>
                                 <p>SSYDW</p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">🌐</span>
                             <div>
-                                <strong>微博 Weibo</strong>
+                                <strong><span class="cn">微博</span> <span class="en">Weibo</span></strong>
                                 <p>SSYDW</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="video-box">
-                    <h3>Home Visit Video 上门服务视频</h3>
+                    <h3><span class="en">Home Visit Video</span> <span class="cn">上门服务视频</span></h3>
                     <div class="video-placeholder">
-                        <p>🎥 Video coming soon!</p>
-                        <p>视频即将推出！</p>
+                        <p>🎥 <span class="en">Video coming soon!</span><span class="cn" style="display:none;">视频即将推出！</span></p>
                     </div>
                 </div>
             </div>
@@ -202,27 +229,29 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <img src="images/logo.png" alt="SSYDW Logo">
-                    <h3>山山医动物</h3>
-                    <p>Pet Care at Your Home</p>
+                    <h3 class="cn">山山医动物</h3>
+                    <h3 class="en" style="display:none;">Pet Care at Your Home</h3>
+                    <p class="en">Dr. Shen Li Veterinary Service</p>
+                    <p class="cn" style="display:none;">李医生兽医服务</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4><span class="en">Quick Links</span><span class="cn" style="display:none;">快速链接</span></h4>
                     <ul>
-                        <li><a href="#home">首页 Home</a></li>
-                        <li><a href="#about">关于 About</a></li>
-                        <li><a href="#services">服务 Services</a></li>
-                        <li><a href="#contact">联系 Contact</a></li>
+                        <li><a href="#home"><span class="cn">首页</span> <span class="en">Home</span></a></li>
+                        <li><a href="#about"><span class="cn">关于</span> <span class="en">About</span></a></li>
+                        <li><a href="#services"><span class="cn">服务</span> <span class="en">Services</span></a></li>
+                        <li><a href="#contact"><span class="cn">联系</span> <span class="en">Contact</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact 联系</h4>
-                    <p>Tel: +1234567890</p>
-                    <p>WeChat: SSYDW</p>
+                    <h4><span class="en">Contact</span> <span class="cn">联系方式</span></h4>
+                    <p><span class="en">Tel:</span><span class="cn" style="display:none;">电话：</span> +1234567890</p>
+                    <p><span class="en">WeChat:</span><span class="cn" style="display:none;">微信：</span> SSYDW</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 山山医动物 Pet Care at Your Home. All rights reserved.</p>
-                <p>Dr. Shen Li Veterinary Service</p>
+                <p>&copy; 2025 <span class="cn">山山医动物</span> <span class="en">Pet Care at Your Home</span>. <span class="en">All rights reserved.</span><span class="cn" style="display:none;">版权所有</span></p>
+                <p><span class="en">Dr. Shen Li Veterinary Service</span><span class="cn" style="display:none;">李医生兽医服务</span></p>
             </div>
         </div>
     </footer>
