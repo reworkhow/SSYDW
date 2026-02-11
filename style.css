@@ -207,6 +207,21 @@ html {
     gap: 0.5rem;
 }
 
+.badge-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: inline-block;
+}
+
+.badge-link .badge,
+.badge-link .badge-alt {
+    text-decoration: none !important;
+}
+
+.badge-link:hover {
+    opacity: 0.9;
+}
+
 .badge {
     background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
     color: white;
